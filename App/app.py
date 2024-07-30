@@ -1,7 +1,7 @@
 import ttkbootstrap as ttk
 from tkinter import filedialog, messagebox
 from ttkbootstrap.constants import *
-from youtube import Download  # Corrigido o nome do módulo
+from youtube import Download  
 import threading
 import time
 
@@ -23,7 +23,7 @@ class App:
         self.frame = ttk.Frame(self.root)
         self.frame.pack(padx=20, pady=20)
         
-        # Title page
+        # Titulo pagina
         self.lb_title = ttk.Label(self.frame, text="DOWNLOAD YOUTUBE", font=("MS Serif", 20))
         self.lb_title.grid(column=1, row=0, padx=10, pady=50)
         
@@ -44,7 +44,7 @@ class App:
         self.btn_download = ttk.Button(self.frame, text="DOWNLOAD", padding=5, width=60, bootstyle=SUCCESS, command=self.start_download)
         self.btn_download.grid(column=1, row=3, padx=10, pady=10)
         
-        # Progress bar
+        # Progresso da barra
         self.progress = ttk.Progressbar(self.frame, orient=HORIZONTAL, mode='determinate', length=280)
         self.progress.grid(column=1, row=4, padx=10, pady=20)
         
